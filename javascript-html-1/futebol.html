@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/bola.ico" type="image/x-icon">
+    <title> Futebol </title>
+</head>
+<body>
+    <script>
+        function jump(){
+            document.write("<br><br>");
+        }
+
+        function escreva(frase){
+            document.write(frase);
+            jump();
+        }
+
+        var vitorias = parseInt(prompt("Digite o número de vitorias"));
+        var empates = parseInt(prompt("Entre com o número de empates"));
+
+        var pontos = (vitorias * 3) + empates;
+
+        escreva("Os pontos do seu time são: "+ pontos);
+
+        if(pontos > 28) {
+            escreva("Seu time se saiu melhor que o ano passado!");
+        }
+
+        if(pontos < 28) {
+            escreva("Seu time foi pior que o ano passado!");
+        }
+
+        if(pontos == 28) {
+            escreva("Seu time teve o mesmo desempenho do ano passado!");
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ano de Copa </title>
+</head>
+<body>
+    <h1> Copas do Mundo! </h1>
+    <script>
+        function pula() {
+            document.write("<br> <br>");
+        }
+
+        function escreva(frase){
+            document.write(frase);
+            pula();
+        }
+
+        var limite = parseInt(prompt("Digite o ano limite"));
+        var ano = 1930;
+
+        while(ano <= limite) {
+            escreva("Em "+ ano +" teve Copa!");
+            ano += 4;
+        }
+
+    </script>
+    
+</body>
+</html>

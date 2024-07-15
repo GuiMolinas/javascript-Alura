@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/int.ico" type="image/x-icon">
+    <title> Adivinhe o número </title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            background: url("https://i.pinimg.com/originals/de/0c/66/de0c66a4e3a69476ab19ab2f76eab289.jpg");
+            background-size: 100% 100%;
+            position: relative;
+            height: 96vh;
+            padding: 10px;
+            background-color: blue;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1> Adivinhador </h1>
+    <script>
+        function jump() {
+            document.write("<br><br>");
+        }
+
+        function escreva(frase) {
+            document.write(frase);
+            jump();
+        }
+
+       
+        var comp = Math.round(Math.random() * 10);
+
+        var tentativas = 1;
+
+        while(tentativas <= 3) {
+            var numero = parseInt(prompt("Digite um número de 0 a 10"));
+            if(numero == comp) {
+                escreva("Você acertou, parabéns!");
+                break;
+            }
+
+            else {
+                escreva("Você errou! O número escolhido era " + comp);
+            }
+
+            tentativas++;
+        }
+        
+    </script>
+    
+</body>
+</html>

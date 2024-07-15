@@ -1,0 +1,29 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    pincel.fillStyle = 'lightgreen';
+    pincel.fillRect(0, 0, 600, 400);
+
+    function desenha (x, y, raio) {
+        pincel.fillStyle = 'darkgreen';
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI);
+        pincel.fill();
+    }
+
+    function limpar() {
+        pincel.clearRect(0, 0, 600, 400);
+    }
+
+    var x = 20;
+
+    function atualiza() {
+       limpar();
+        desenha(x, 20, 10);
+        x++;
+    }
+
+    setInterval(atualiza, 20);
+</script>

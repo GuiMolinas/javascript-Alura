@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Média de Idades </title>
+</head>
+<body>
+    <h1> Média de Idades </h1>
+    <script>
+         function pula(){
+            document.write("<br><br>");
+        }
+
+        function escreva(frase){
+            document.write(frase);
+            pula();
+        }
+
+        var familia = parseInt(prompt("Digite o total de familiares"));
+        var total = 1;
+        var totalI = 0;
+
+        while (total <= familia) {
+            var idade = parseInt(prompt("Digite a idade da "+ total +"° pessoa"))
+            totalI = totalI + idade;
+            total++
+        }
+
+        var media = totalI/familia;
+        escreva("A média de idades é igual a "+ media);
+    </script>
+    
+</body>
+</html>
